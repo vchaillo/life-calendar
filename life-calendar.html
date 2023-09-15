@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./life-calendar.css">
+    <script src="./life-calendar.js"></script>
+</head>
+<body>
+
+    <h3>Life Calendar</h3>
+    
+    <div id="calendar">
+        <script>
+            for (let i = 0; i < 90; i++) {
+                // document.write('<span class="year-number">' + i);    
+                document.write('</span><div class="year">');    
+                for (let j = 0; j < 52; j++) {
+                    document.write('<div class="week"></div>');
+                    if (j === 51) {
+                        document.write('<div class="week yellow"></div>');    
+                    }    
+                }
+                document.write('</div><br>');
+            }
+        </script>
+    </div>
+        
+</body>
+</html>

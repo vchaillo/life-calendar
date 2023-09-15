@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+}
+
+h3 {
+    text-align: center;
+    color: yellow;
+}
+
+#calendar {
+    margin: 10px;
+    /* display: flex; */
+    /* max-width: 800px; */
+    /* justify-content: center; */
+}
+
+.year {
+    display: inline-block;
+    /* flex-direction: row; */
+}
+
+.year-number {
+    color: yellow;
+    margin-right: 5px;
+}
+
+.week {
+    background-color: cornsilk;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 2px;
+}
+.week:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.week.yellow {
+    background-color: yellow;
+}
