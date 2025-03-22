@@ -1,0 +1,45 @@
+.calendar {
+	text-align: center;
+
+	.calendar-header {
+		display: flex;
+		justify-content: space-between;
+		width: 52 * 1rem + 6.5rem;
+		margin: auto;
+	}
+
+	.flex {
+		display: flex;
+		justify-content: center;
+
+		.calendar-left {
+			margin-right: 0.5rem;
+			display: flex;
+			text-align: right;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.calendar-frame {
+
+			.line {
+				display: flex;
+				flex-wrap: nowrap;
+
+				.square {
+					background-color: yellow;
+					padding: 0.5rem;
+					display: inline-block;
+					// margin: 0.1rem;
+					outline: 0px solid black;
+					border: 1px solid black;
+
+					&:hover {
+						background-color: crimson !important;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

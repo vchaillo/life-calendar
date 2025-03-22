@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="calendar">
+
+		<div class="calendar-header">
+			<span *ngFor="let number of weekNumbers">{{ number }}</span>
+		</div>
+
+		<div class="flex">
+			<div class="calendar-left">
+				<span *ngFor="let number of yearNumbers">{{ number }}</span>
+			</div>
+
+			<div class="calendar-frame">
+				<div class="line" *ngFor="let year of years">
+					<div class="square" title="Year : {{ year.number }} week : {{ week.number }}"
+						(click)="displayWeek(year.number, week.number)" *ngFor="let week of year.weeks"
+						[style.background-color]="week.color">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

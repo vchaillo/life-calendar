@@ -1,0 +1,31 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	position: sticky;
+	top: 0;
+
+	h1:hover {
+		cursor: pointer;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.add-button {
+		background-color: #1C1D1E;
+		color: yellow;
+		border-radius: 5px;
+		width: 2.5rem;
+		height: 2.5rem;
+		transition: all 0.1s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			/* background-color: #545454; */
+		}
+	}
+}
