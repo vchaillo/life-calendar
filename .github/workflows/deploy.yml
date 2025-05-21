@@ -1,0 +1,37 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular app
+        # run: ng build --configuration=production --base-href "/life-calendard/"
+        run: NODE_ENV=production npm run build --if-present
+
+      - name: Force https
+        run: touch dist/life-calendard/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages 
+          folder: dist/life-calendard/browser
+          ssh-key: ${{ secrets.SSH_KEY }}
