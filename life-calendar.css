@@ -1,44 +1,5 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: darkslategray;
-}
+body{margin:0;padding:24px;background:light-dark(#f7f8fa,#15171c);color-scheme:light dark}#life-preview{max-width:1200px;margin:0 auto}.cursor-interaction{cursor:pointer}@media(max-width:650px){body{padding:8px}}
 
-h3 {
-    text-align: center;
-    color: yellow;
-}
-
-#calendar {
-    margin: 10px;
-    /* display: flex; */
-    /* max-width: 800px; */
-    /* justify-content: center; */
-}
-
-.year {
-    display: inline-block;
-    /* flex-direction: row; */
-}
-
-.year-number {
-    color: yellow;
-    margin-right: 5px;
-}
-
-.week {
-    background-color: cornsilk;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    margin: 2px;
-}
-.week:hover {
-    cursor: pointer;
-    background-color: grey;
-}
-
-.week.yellow {
-    background-color: yellow;
-}
+#life-preview{--lc-bg:light-dark(#f7f8fa,#15171c);--lc-panel:light-dark(#ffffff,#1b1e25);--lc-text:light-dark(#252d3c,#eceef5);--lc-muted:light-dark(#697486,#9ca6ba);--lc-border:light-dark(#e5e8ef,#333946);--lc-cell:light-dark(#e4e8ef,#343b49);--lc-accent:light-dark(#635bcb,#ada6ff);--lc-soft:light-dark(#eeedf9,#302e48);--lc-sport:light-dark(#75b5a0,#79bba6);--lc-travel:light-dark(#e4b16d,#e9b979);--lc-project:light-dark(#9693d0,#a5a2df);--lc-social:light-dark(#d792ab,#e09bb4);--lc-learn:light-dark(#77a7c8,#89b9da);display:grid;grid-template-columns:230px minmax(0,1fr);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.5;background:var(--lc-bg);color:var(--lc-text);border:1px solid var(--lc-border);border-radius:16px;overflow:hidden;color-scheme:light dark}
+#life-preview *{box-sizing:border-box}#life-preview .lc-sidebar{padding:28px 20px;background:var(--lc-panel);border-right:1px solid var(--lc-border)}#life-preview .lc-brand{font-size:19px;font-weight:600;display:flex;gap:10px;align-items:center;letter-spacing:-.6px}#life-preview .lc-brand svg{color:var(--lc-accent)}#life-preview .lc-overline{font-size:10px;letter-spacing:1.5px;font-weight:600;color:var(--lc-muted);margin-top:10px}#life-preview .lc-section{margin:34px 0 12px;font-size:12px;font-weight:600;color:var(--lc-muted)}#life-preview button,#life-preview select{font:inherit;color:inherit}#life-preview .lc-category,#life-preview .lc-tool{display:flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:9px;padding:10px 11px;width:100%;background:transparent;text-align:left;margin:3px 0}#life-preview .lc-category[aria-pressed=true],#life-preview .lc-tool[aria-pressed=true]{background:var(--lc-soft);border-color:var(--lc-border)}#life-preview .lc-swatch{width:12px;height:12px;border-radius:4px;flex:none}#life-preview .lc-category small{margin-left:auto;color:var(--lc-muted);font-size:11px}#life-preview .lc-tool{color:var(--lc-muted);font-size:12px}#life-preview .lc-tool:disabled{opacity:.5}#life-preview .lc-divider{border-top:1px solid var(--lc-border);margin:24px 0}#life-preview .lc-field{display:block;font-size:12px;color:var(--lc-muted);margin:16px 0}#life-preview select{display:block;width:100%;padding:8px;margin-top:7px;border:1px solid var(--lc-border);border-radius:7px;background:var(--lc-panel)}#life-preview .lc-note{font-size:12px;color:var(--lc-muted);margin-top:26px}#life-preview .lc-session{font-size:10px;color:var(--lc-muted);margin-top:26px;display:flex;gap:6px;align-items:center}#life-preview .lc-session span{width:6px;height:6px;border-radius:50%;background:var(--lc-sport)}#life-preview main{padding:28px 28px 20px;min-width:0}#life-preview header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}#life-preview header .lc-overline{margin:0}#life-preview h2{font-size:25px;font-weight:600;letter-spacing:-.8px;margin:5px 0 0;line-height:1.3}#life-preview .lc-badge{font-size:12px;border:1px solid var(--lc-border);padding:6px 12px;border-radius:20px;background:var(--lc-panel);white-space:nowrap}#life-preview .lc-toolbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--lc-muted);margin-top:28px}#life-preview strong{font-weight:500;color:var(--lc-text)}#life-preview .lc-dot{padding:0 8px}#life-preview .lc-selected{font-size:12px;padding:10px 0;color:var(--lc-muted);min-height:39px;border-bottom:1px solid var(--lc-border);margin-bottom:16px}#life-preview .lc-grid-area{overflow-x:auto;padding-bottom:10px}#life-preview .lc-axis,#life-preview .lc-row{display:grid;grid-template-columns:32px minmax(0,1fr);gap:10px;align-items:center}#life-preview .lc-axis{font-size:10px;color:var(--lc-muted);margin-bottom:10px;min-width:420px}#life-preview .lc-axis>div{display:grid;grid-template-columns:repeat(52,minmax(0,1fr));gap:3px}#life-preview .lc-axis b{font-weight:400;text-align:center;grid-column:span 1}#life-preview .lc-row{margin:3px 0;min-width:420px}#life-preview .lc-age{font-size:10px;color:var(--lc-muted);text-align:right;font-variant-numeric:tabular-nums}#life-preview .lc-cells{display:grid;grid-template-columns:repeat(52,minmax(0,1fr));gap:3px}#life-preview .lc-week{border:0;padding:0;background:var(--lc-cell);aspect-ratio:1;border-radius:2px;min-width:0;touch-action:pan-y}#life-preview .lc-week:hover{outline:2px solid var(--lc-accent);outline-offset:1px}#life-preview .lc-row.decade{margin-top:12px}#life-preview .lc-row.decade .lc-age{font-weight:600;color:var(--lc-text)}#life-preview .lc-bottom{font-size:11px;color:var(--lc-muted);margin-top:10px}#life-preview.comfort .lc-row,#life-preview.comfort .lc-axis{min-width:780px}#life-preview button:focus-visible,#life-preview select:focus-visible{outline:2px solid var(--lc-accent);outline-offset:2px}
+@media(max-width:650px){#life-preview{grid-template-columns:1fr}#life-preview .lc-sidebar{border-right:0;border-bottom:1px solid var(--lc-border);padding:20px}#life-preview .lc-section{margin-top:18px}#life-preview .lc-palette{display:flex;flex-wrap:wrap;gap:4px}#life-preview .lc-category{width:auto}#life-preview .lc-category small{display:none}#life-preview .lc-tool{display:inline-flex;width:auto}#life-preview .lc-field{display:inline-block;width:46%;margin-right:3%}#life-preview .lc-divider,#life-preview .lc-note,#life-preview .lc-session{display:none}#life-preview main{padding:20px}#life-preview h2{font-size:22px}}

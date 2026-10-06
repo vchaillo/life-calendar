@@ -1,33 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./life-calendar.css">
-    <script src="./life-calendar.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life Calendar</title>
+<meta name="description" content="Un calendrier de vie de 90 années, semaine par semaine.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23635bcb%27/%3E%3Ctext x=%276%27 y=%2725%27 font-size=%2727%27 fill=%27white%27%3E%E2%96%A6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./life-calendar.css">
+<script src="./life-calendar.js" defer></script>
 </head>
 <body>
+<div id="life-preview">
+  <aside class="lc-sidebar">
+    <div class="lc-brand"><span aria-hidden="true">▦</span> Life Calendar</div>
+    <div class="lc-section">Colorer avec</div>
+    <div class="lc-palette"></div>
+    <button class="lc-tool cursor-interaction" data-action="erase"><span aria-hidden="true">◇</span> Gomme</button>
+    <button class="lc-tool cursor-interaction" data-action="undo"><span aria-hidden="true">↶</span> Annuler le dernier geste</button>
+    <div class="lc-divider"></div>
+    <div class="lc-note">Choisis une couleur. Maintiens le clic et glisse jusqu’à la dernière semaine pour colorer toute la période.</div>
+    <div class="lc-session"><span></span> Sauvegarde locale dans ce navigateur</div>
+  </aside>
+  <main>
+    <header><div><div class="lc-overline">MON CALENDRIER DE VIE</div><h2>Les semaines qui comptent.</h2></div><span class="lc-badge">90 années</span></header>
+    <div class="lc-toolbar"><span><strong>1 case</strong> = 1 semaine <span class="lc-dot">·</span> <strong>1 ligne</strong> = 1 année</span><span class="lc-count">0 semaine colorée</span></div>
+    <div class="lc-selected" aria-live="polite">Sélectionne une semaine pour commencer.</div>
+    <div class="lc-grid-area"><div class="lc-axis"><span>Âge</span><div></div></div><div class="lc-grid"></div></div>
+    <div class="lc-bottom">52 semaines par année · repères tous les 10 ans</div>
+  </main>
+</div>
 
-    <h3>Life Calendar</h3>
-    
-    <div id="calendar">
-        <script>
-            for (let i = 0; i < 90; i++) {
-                // document.write('<span class="year-number">' + i);    
-                document.write('</span><div class="year">');    
-                for (let j = 0; j < 52; j++) {
-                    document.write('<div class="week"></div>');
-                    if (j === 51) {
-                        document.write('<div class="week yellow"></div>');    
-                    }    
-                }
-                document.write('</div><br>');
-            }
-        </script>
-    </div>
-        
 </body>
 </html>

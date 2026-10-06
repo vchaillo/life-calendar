@@ -1,27 +1,17 @@
-# LifeCalendar
+# Life Calendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+A dependency-free calendar of life: 90 rows, with 52 weeks per row.
 
-## Development server
+## Run locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Serve the repository root with `python3 -m http.server 8000`, then open http://localhost:8000.
 
-## Code scaffolding
+The app uses three files: `index.html`, `life-calendar.css`, and `life-calendar.js`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Choose a category, then click a week or hold and drag to paint a continuous period. Use the eraser to clear weeks and undo to revert the last gesture.
 
-## Build
+Colors are saved in localStorage in the current browser. They are not synchronized across browsers or devices. Undo history lasts for the current session.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Every push to `main` publishes the three static files to `gh-pages` using the existing `SSH_KEY` secret. GitHub Pages should remain configured to serve the root of `gh-pages`.
