@@ -11,9 +11,19 @@
 </head>
 <body>
 <div id="life-minimal">
-  <header><span class="brand">Life Calendar</span><div class="tools"><button type="button" data-tool="erase" class="cursor-interaction" aria-label="Gomme" title="Gomme"><span aria-hidden="true">◇</span></button><button type="button" data-tool="undo" class="cursor-interaction" aria-label="Annuler" title="Annuler"><span aria-hidden="true">↶</span></button></div></header>
+  <header><span class="brand">Life Calendar<span class="brand-dot"></span></span><div class="tools">
+    <button type="button" data-tool="erase" aria-label="Gomme" title="Gomme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 3 5 5-11 11H5l-3-3L15 3Z M8 10l7 7 M10 21h12"/></svg></button>
+    <button type="button" data-tool="undo" aria-label="Annuler" title="Annuler"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 4 9l5 5 M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button>
+    <button type="button" data-tool="manage" aria-label="Gérer les catégories" title="Gérer les catégories"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6"/></svg></button>
+  </div></header>
   <nav aria-label="Catégories"></nav>
-  <div class="scroll"><div class="axis"><span></span><div></div></div><div class="grid" aria-label="Calendrier de vie"></div></div>
+  <main class="calendar"><div class="axis"><span></span><div></div></div><div class="grid" aria-label="Calendrier de vie"></div></main>
+  <dialog aria-labelledby="category-title">
+    <form method="dialog" class="dialog-header"><h1 id="category-title">Catégories</h1><button aria-label="Fermer" title="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12 M18 6 6 18"/></svg></button></form>
+    <div class="category-editor"></div>
+    <form class="category-add"><input name="name" aria-label="Nom de la nouvelle catégorie" placeholder="Nouvelle catégorie" maxlength="60" required><input name="color" type="color" aria-label="Couleur de la nouvelle catégorie" value="#839775"><button type="submit">Ajouter</button></form>
+  </dialog>
+  <p class="save-error" role="alert" hidden>La sauvegarde locale est indisponible.</p>
 </div>
 
 </body>
