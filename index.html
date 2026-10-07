@@ -10,24 +10,10 @@
 <script src="./life-calendar.js" defer></script>
 </head>
 <body>
-<div id="life-preview">
-  <aside class="lc-sidebar">
-    <div class="lc-brand"><span aria-hidden="true">▦</span> Life Calendar</div>
-    <div class="lc-section">Colorer avec</div>
-    <div class="lc-palette"></div>
-    <button class="lc-tool cursor-interaction" data-action="erase"><span aria-hidden="true">◇</span> Gomme</button>
-    <button class="lc-tool cursor-interaction" data-action="undo"><span aria-hidden="true">↶</span> Annuler le dernier geste</button>
-    <div class="lc-divider"></div>
-    <div class="lc-note">Choisis une couleur. Maintiens le clic et glisse jusqu’à la dernière semaine pour colorer toute la période.</div>
-    <div class="lc-session"><span></span> Sauvegarde locale dans ce navigateur</div>
-  </aside>
-  <main>
-    <header><div><div class="lc-overline">MON CALENDRIER DE VIE</div><h2>Les semaines qui comptent.</h2></div><span class="lc-badge">90 années</span></header>
-    <div class="lc-toolbar"><span><strong>1 case</strong> = 1 semaine <span class="lc-dot">·</span> <strong>1 ligne</strong> = 1 année</span><span class="lc-count">0 semaine colorée</span></div>
-    <div class="lc-selected" aria-live="polite">Sélectionne une semaine pour commencer.</div>
-    <div class="lc-grid-area"><div class="lc-axis"><span>Âge</span><div></div></div><div class="lc-grid"></div></div>
-    <div class="lc-bottom">52 semaines par année · repères tous les 10 ans</div>
-  </main>
+<div id="life-minimal">
+  <header><span class="brand">Life Calendar</span><div class="tools"><button type="button" data-tool="erase" class="cursor-interaction" aria-label="Gomme" title="Gomme"><span aria-hidden="true">◇</span></button><button type="button" data-tool="undo" class="cursor-interaction" aria-label="Annuler" title="Annuler"><span aria-hidden="true">↶</span></button></div></header>
+  <nav aria-label="Catégories"></nav>
+  <div class="scroll"><div class="axis"><span></span><div></div></div><div class="grid" aria-label="Calendrier de vie"></div></div>
 </div>
 
 </body>
